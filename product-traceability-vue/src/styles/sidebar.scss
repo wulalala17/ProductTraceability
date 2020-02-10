@@ -1,0 +1,35 @@
+.sidebar-container {
+  background: rgb(32, 34, 42);
+  // transition: width .6s;
+  // &.is-active{
+  //   width: 64px ;
+  // }
+}
+
+
+.el-menu .el-submenu .el-submenu__title,
+.el-menu .el-menu-item {
+  background-color: rgb(32, 34, 42) !important;
+  &.is-active{
+    color: #fff  !important;
+    background-color: rgba(0,0,0,.8) !important;
+  }
+  &.is-active:before {
+    content: " ";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    background: #409eff;
+    position: absolute;
+  }
+}
+
+//鼠标悬停高亮
+.el-menu-item:hover i, 
+.el-menu-item:hover span,
+.el-submenu__title:hover i, 
+.el-submenu__title:hover span {
+  color: #fff;
+  background-color: rgb(32, 34, 42) !important;
+}
