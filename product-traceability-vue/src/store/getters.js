@@ -4,5 +4,6 @@ const getters = {
     // 获取菜单
     menu: state => state.user.menu,
     menuAll: state => state.user.menuAll,
+    role: state => state.login.role,
 }
 export default getters

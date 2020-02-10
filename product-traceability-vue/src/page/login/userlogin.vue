@@ -29,6 +29,20 @@
            class="icon-mima icon-font"></i>
       </el-input>
     </el-form-item>
+    <el-form-item prop="role">
+        <span>账号类型</span>
+        <el-select 
+          size="small"
+          v-model="loginForm.role" 
+          placeholder="请选择">
+        <el-option
+          v-for="item in role"
+          :key="item.id"
+          :label="item.label"
+          :value="item.id">
+        </el-option>
+      </el-select>
+    </el-form-item>
     <el-checkbox v-model="checked">记住账号</el-checkbox>
     <el-form-item>
       <el-button type="primary"
@@ -39,6 +53,7 @@
   </el-form>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'userlogin',
@@ -50,6 +65,7 @@ export default {
         password: '',
         code: '',
         redomStr: '',
+        role: ''
       },
       checked: false,
       code: {
@@ -78,6 +94,7 @@ export default {
   },
   mounted() {},
   computed: {
+    ...mapGetters(['role'])
   },
   props: [],
   methods: {
