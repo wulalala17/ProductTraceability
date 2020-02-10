@@ -1,4 +1,4 @@
-# simpleproject--
+# product-traceability-vue
 
 > A Vue.js project
 
